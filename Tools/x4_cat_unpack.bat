@@ -59,31 +59,31 @@ if not exist "%JUNCTION_PATH%" (
     )
 )
 
-if exist "%JUNCTION_PATH%\unpacked-cat-files" (
+if exist "%JUNCTION_PATH%\extracted" (
     echo:
-    echo Removing existing "unpacked-cat-files" folder, this may take a while...
-    rmdir /s /q "%JUNCTION_PATH%\unpacked-cat-files"
+    echo Removing existing "extracted" folder, this may take a while...
+    rmdir /s /q "%JUNCTION_PATH%\extracted"
 )
 
 :: Ensuring new output directories exist
-mkdir "%JUNCTION_PATH%\unpacked-cat-files" 2>nul
-mkdir "%JUNCTION_PATH%\unpacked-cat-files\ego_base_game" 2>nul
+mkdir "%JUNCTION_PATH%\extracted" 2>nul
+mkdir "%JUNCTION_PATH%\extracted\extensions" 2>nul
 
 echo:
 echo Started extracting base game .cat files
 for %%f in (*.cat) do (
     set "FILENAME=%%~nf"
-    if /i "!FILENAME:~-4!" NEQ "_sig" "%JUNCTION_PATH%\XRCatTool.exe" -in "%%f" -out "%JUNCTION_PATH%\unpacked-cat-files\ego_base_game"
+    if /i "!FILENAME:~-4!" NEQ "_sig" "%JUNCTION_PATH%\XRCatTool.exe" -in "%%f" -out "%JUNCTION_PATH%\extracted"
 )
 
 echo:
 echo Started extracting DLC .cat files from extensions folder
 for /d %%d in (extensions\ego_dlc*) do (
     set "DLC_NAME=%%~nxd"
-    mkdir "%JUNCTION_PATH%\unpacked-cat-files\!DLC_NAME!"
+    mkdir "%JUNCTION_PATH%\extracted\extensions\!DLC_NAME!"
     for %%f in (%%d\*.cat) do (
         set "FILENAME=%%~nf"
-        if /i "!FILENAME:~-4!" NEQ "_sig" "%JUNCTION_PATH%\XRCatTool.exe" -in "%%f" -out "%JUNCTION_PATH%\unpacked-cat-files\!DLC_NAME!"
+        if /i "!FILENAME:~-4!" NEQ "_sig" "%JUNCTION_PATH%\XRCatTool.exe" -in "%%f" -out "%JUNCTION_PATH%\extracted\extensions\!DLC_NAME!"
     )
 )
 echo:
