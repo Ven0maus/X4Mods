@@ -1,3 +1,15 @@
+:: ##############################################################
+:: #                                                            #
+:: #  x4_cat_unpack.bat - Created by Venomaus (2025)            #
+:: #                                                            #
+:: #  This script is released under the GNU General Public      #
+:: #  License (GPL) as defined on the GitHub repository.        #
+:: #                                                            #
+:: #  For details, see:                                         #
+:: #  https://github.com/Ven0maus/X4Mods/blob/main/LICENSE      #
+:: #                                                            #
+:: ##############################################################
+
 @echo off
 setlocal enabledelayedexpansion
 set "GAMEPATH=%CD%"
