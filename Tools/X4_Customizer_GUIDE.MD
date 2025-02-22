@@ -1,4 +1,5 @@
 # X4 Customizer Guide
+https://github.com/bvbohnen/X4_Customizer
 
 ## Initial Setup
 1. Open **X4 Customizer**.
