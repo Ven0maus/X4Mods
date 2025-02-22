@@ -1,8 +1,8 @@
-# README: X4 Cat Unpack Script
+# X4 Cat Unpack Script
 
 ## Overview
 
-This batch script (`x4_cat_unpack.bat`) is designed to extract `.cat` files from *X4: Foundations*, including both the base game and any installed DLCs. The script ensures proper execution by verifying the game directory, checking for required tools, and handling long file paths via a junction link.
+The batch script (`x4_cat_unpack.bat`) is designed to extract `.cat` files from *X4: Foundations*, including both the base game and any installed DLCs. The script ensures proper execution by verifying the game directory, checking for required tools, and handling long file paths via a junction link.
 
 ## Requirements
 
