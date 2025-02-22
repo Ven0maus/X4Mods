@@ -18,13 +18,13 @@ The batch script (`x4_cat_unpack.bat`) is designed to extract `.cat` files from 
 3. **Wait for the extraction to complete.**
 4. **The extracted files will be located in `unpacked-cat-files`.**
 
-### **Extraction process**
+## **Extraction process**
 
-#### **Base Game Files**
+### **Base Game Files**
 
 - The script searches for all `.cat` files in the game root and extracts them using `XRCatTool.exe` into `unpacked-cat-files/ego_base_game`.
 
-#### **DLC Files**
+### **DLC Files**
 
 - The script iterates through each DLC folder (`extensions/ego_dlc*`) and extracts its `.cat` files into corresponding subfolder(s) under `unpacked-cat-files` for each DLC.
 
