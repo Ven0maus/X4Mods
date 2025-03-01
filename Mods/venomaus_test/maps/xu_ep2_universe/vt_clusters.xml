@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="vt_CL_c001_macro" class="cluster">
+    <component ref="standardcluster" />
+    <connections>
+      <connection name="vt_SE_c001_s001_connection" ref="sectors">
+        <offset>
+          <position x="0" y="0" z="0" />
+        </offset>
+        <macro ref="vt_SE_c001_s001_macro" connection="cluster" />
+      </connection>
+      <connection name="vt_SE_c001_s002_connection" ref="sectors">
+        <offset>
+          <position x="0" y="0" z="-1000000" />
+        </offset>
+        <macro ref="vt_SE_c001_s002_macro" connection="cluster" />
+      </connection>
+      <connection name="vt_SE_c001_s003_connection" ref="sectors">
+        <offset>
+          <position x="1000000" y="0" z="-500000" />
+        </offset>
+        <macro ref="vt_SE_c001_s003_macro" connection="cluster" />
+      </connection>
+      <connection name="vt_RE_c001_s003_r001_connection" ref="regions">
+        <offset>
+          <position x="1000000" y="0" z="-500000" />
+        </offset>
+        <macro name="vt_RE_c001_s003_r001_macro">
+          <component connection="cluster" ref="standardregion" />
+          <properties>
+            <region ref="region_vt_RE_c001_s003_r001" />
+          </properties>
+        </macro>
+      </connection>
+      <connection ref="content">
+        <macro>
+          <component connection="space" ref="Cluster_01" />
+        </macro>
+      </connection>
+    </connections>
+  </macro>
+</macros>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<diff>
+  <add sel="/macros">
+    <macro name="vt_ZO_Cluster721_Sector001_z001_macro" class="zone">
+      <component ref="standardzone" />
+      <connections>
+        <connection name="vt_GA_g001_Cluster721_Sector001_z001_c001_s003_z002_connection" ref="gates">
+          <offset>
+            <position x="0" y="1000" z="0" />
+            <rotation yaw="121" pitch="0" roll="0" />
+          </offset>
+          <macro ref="props_gates_anc_gate_macro" connection="space" />
+        </connection>
+      </connections>
+    </macro>
+  </add>
+</diff>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<index>
+  <entry name="vt_CL_*" value="extensions\venomaus_test\maps\XU_ep2_universe\vt_clusters" />
+  <entry name="vt_SE_*" value="extensions\venomaus_test\maps\XU_ep2_universe\vt_sectors" />
+  <entry name="vt_ZO_*" value="extensions\venomaus_test\maps\XU_ep2_universe\vt_zones" />
+  <entry name="vt_RE_*" value="extensions\venomaus_test\libraries\region_definitions" />
+</index>
