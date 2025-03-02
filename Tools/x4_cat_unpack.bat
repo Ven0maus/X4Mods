@@ -16,17 +16,6 @@ set "GAMEPATH=%CD%"
 set "DRIVE=%GAMEPATH:~0,2%"
 set "JUNCTION_PATH=%DRIVE%\X4CAT"
 
-:: Extract the last part of the path
-for %%A in ("%GAMEPATH%") do set "LASTFOLDER=%%~nxA"
-
-:: Check if the last folder name is "X4 Foundations"
-if /I "%LASTFOLDER%" NEQ "X4 Foundations" (
-    echo The x4_cat_unpack.bat file must be located within the game's directory.
-    echo Please execute this file from the correct directory.
-    pause
-    exit /b
-)
-
 :: Validate if XRCatTool.exe exists
 if not exist "%GAMEPATH%\XRCatTool.exe" (
     echo:
