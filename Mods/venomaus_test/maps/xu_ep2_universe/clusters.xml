@@ -22,7 +22,7 @@
 					</offset>
 					<macro ref="Cluster_vtC001_Sector003_macro" connection="cluster"/>
 				</connection>
-				<connection name="CvtC001S001_Region001_connection" ref="regions">
+				<connection name="CvtC001S003_Region001_connection" ref="regions">
 					<offset>
 						<position x="1000000" y="0" z="-500000"/>
 					</offset>
