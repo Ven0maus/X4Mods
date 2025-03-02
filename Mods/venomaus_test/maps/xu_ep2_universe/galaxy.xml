@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <diff>
   <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
-    <connection name="vt_CL_c001_connection" ref="clusters">
+    <connection name="Cluster_vtC001_connection" ref="clusters">
       <offset>
         <position x="-225000000" y="0" z="8660000" />
       </offset>
-      <macro ref="vt_CL_c001_macro" connection="galaxy" />
+      <macro ref="Cluster_vtC001_macro" connection="galaxy" />
     </connection>
-    <connection name="vt_GA_g001_c001_s001_z001_c001_s002_z001_connection" ref="destination" path="../vt_CL_c001_connection/vt_SE_c001_s001_connection/vt_ZO_c001_s001_z001_connection/vt_GA_g001_c001_s001_z001_c001_s002_z001_connection">
-      <macro connection="destination" path="../../../../../vt_CL_c001_connection/vt_SE_c001_s002_connection/vt_ZO_c001_s002_z001_connection/vt_GA_g001_c001_s002_z001_c001_s001_z001_connection" />
+    <connection name="vt_GA_g001_c001_s001_z001_c001_s002_z001_connection" ref="destination" path="../Cluster_vtC001_connection/Cluster_vtC001_Sector001_connection/Zone001_Cluster_vtC001_Sector001_connection/connection_ClusterGatevtC001Sector001TovtC001Sector002">
+      <macro connection="destination" path="../../../../../Cluster_vtC001_connection/Cluster_vtC001_Sector002_connection/Zone001_Cluster_vtC001_Sector002_connection/connection_ClusterGatevtC001Sector002TovtC001Sector001" />
     </connection>
-    <connection name="vt_GA_g001_c001_s002_z002_c001_s003_z001_connection" ref="destination" path="../vt_CL_c001_connection/vt_SE_c001_s002_connection/vt_ZO_c001_s002_z002_connection/vt_GA_g001_c001_s002_z002_c001_s003_z001_connection">
-      <macro connection="destination" path="../../../../../vt_CL_c001_connection/vt_SE_c001_s003_connection/vt_ZO_c001_s003_z001_connection/vt_GA_g001_c001_s003_z001_c001_s002_z002_connection" />
+    <connection name="vt_GA_g001_c001_s002_z002_c001_s003_z001_connection" ref="destination" path="../Cluster_vtC001_connection/Cluster_vtC001_Sector002_connection/Zone002_Cluster_vtC001_Sector002_connection/connection_ClusterGatevtC001Sector002TovtC001Sector003">
+      <macro connection="destination" path="../../../../../Cluster_vtC001_connection/Cluster_vtC001_Sector003_connection/Zone001_Cluster_vtC001_Sector003_connection/connection_ClusterGatevtC001Sector003TovtC001Sector002" />
     </connection>
-    <connection name="vt_GA_g001_c001_s003_z002_Cluster721_Sector001_z001_connection" ref="destination" path="../vt_CL_c001_connection/vt_SE_c001_s003_connection/vt_ZO_c001_s003_z002_connection/vt_GA_g001_c001_s003_z002_Cluster721_Sector001_z001_connection">
-      <macro connection="destination" path="../../../../../Cluster_721_connection/Cluster_721_Sector001_connection/vt_ZO_Cluster721_Sector001_z001_connection/vt_GA_g001_Cluster721_Sector001_z001_c001_s003_z002_connection" />
+    <connection name="vt_GA_g001_c001_s003_z002_Cluster721_Sector001_z001_connection" ref="destination" path="../Cluster_vtC001_connection/Cluster_vtC001_Sector003_connection/Zone002_Cluster_vtC001_Sector003_connection/connection_ClusterGatevtC001Sector003ToCluster721Sector001">
+      <macro connection="destination" path="../../../../../Cluster_721_connection/Cluster_721_Sector001_connection/Zone001_Cluster721_Sector001_connection/connection_ClusterGateCluster721Sector001tovtC001Sector003" />
     </connection>
   </add>
 </diff>
