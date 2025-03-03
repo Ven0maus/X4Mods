@@ -16,17 +16,17 @@ The batch script (`x4_cat_unpack.bat`) is designed to extract `.cat` files from 
 1. **Place `x4_cat_unpack.bat` in the `X4 Foundations` game folder.**
 2. **Ensure `XRCatTool.exe` is present in the same directory.**
 3. **Wait for the extraction to complete.**
-4. **The extracted files will be located in `unpacked-cat-files`.**
+4. **The extracted files will be located in `extracted`.**
 
 ## **Extraction process**
 
 ### **Base Game Files**
 
-- The script searches for all `.cat` files in the game root and extracts them using `XRCatTool.exe` into `unpacked-cat-files/ego_base_game`.
+- The script searches for all `.cat` files in the game root and extracts them using `XRCatTool.exe` into `extracted`.
 
 ### **DLC Files**
 
-- The script iterates through each DLC folder (`extensions/ego_dlc*`) and extracts its `.cat` files into corresponding subfolder(s) under `unpacked-cat-files` for each DLC.
+- The script iterates through each DLC folder (`extensions/ego_dlc*`) and extracts its `.cat` files into corresponding subfolder(s) under `extracted/extensions` for each DLC.
 
 ## Troubleshooting
 
