@@ -2,18 +2,19 @@
 
 ## Overview
 
-The batch script (`x4_cat_unpack.bat`) is designed to extract `.cat` files from *X4: Foundations*, including both the base game and any installed DLCs. The script ensures proper execution by verifying the game directory, checking for required tools, and handling long file paths via a junction link.
+The batch script (`x4_cat_unpack.bat`) is designed to extract `.cat` files from *X4: Foundations*, including both the base game and any installed DLCs or mods for the game that have been packed.
+The script ensures proper execution by verifying for required tools, and handling long file paths via a junction link.
 
 ## Requirements
 
-1. **X4: Foundations** must be installed, and the script must be run from within the game directory.
-2. **XRCatTool.exe** must be placed in the game's root directory.
+1. The script must be run from within the game directory, or a mod directory with packed cat files.
+2. **XRCatTool.exe** must be placed in the same directory as the bat file.
    - You can download it from the official Egosoft wiki:  
      [X4 Cat Tool](https://wiki.egosoft.com:1337/X4%20Foundations%20Wiki/Modding%20Support/X%20Catalog%20Tool)
 
 ## How to Use the Script
 
-1. **Place `x4_cat_unpack.bat` in the `X4 Foundations` game folder.**
+1. **Place `x4_cat_unpack.bat` in the `X4 Foundations` game folder or any mod folder with packed cat files.**
 2. **Ensure `XRCatTool.exe` is present in the same directory.**
 3. **Wait for the extraction to complete.**
 4. **The extracted files will be located in `extracted`.**
@@ -22,17 +23,13 @@ The batch script (`x4_cat_unpack.bat`) is designed to extract `.cat` files from 
 
 ### **Base Game Files**
 
-- The script searches for all `.cat` files in the game root and extracts them using `XRCatTool.exe` into `extracted`.
+- The script searches for all `.cat` files in the folder and extracts them using `XRCatTool.exe` into `extracted`.
 
 ### **DLC Files**
 
 - The script iterates through each DLC folder (`extensions/ego_dlc*`) and extracts its `.cat` files into corresponding subfolder(s) under `extracted/extensions` for each DLC.
 
 ## Troubleshooting
-
-### **Error: "The x4_cat_unpack.bat file must be located within the game's directory."**
-
-- Move the script to the correct game installation folder and try again.
 
 ### **Error: "Missing required XRCatTool.exe file"**
 
@@ -48,9 +45,9 @@ The batch script (`x4_cat_unpack.bat`) is designed to extract `.cat` files from 
 
 ## Notes
 
-- Running this script **does not modify the game files**; it only extracts them for modding purposes.
-- If the game updates to a new version, just run the unpack script again. It will remove the previous unpacked files automatically.
-- Ensure you have enough storage space on the drive of the game's directory.
+- Running this script **does not modify any files**; it only extracts them for modding purposes.
+- Running the unpack script again, will remove the previous extracted files, and unpack from scratch again.
+- Ensure you have enough storage space to contain the extracted files
 
 ---
 
