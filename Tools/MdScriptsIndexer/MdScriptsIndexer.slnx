@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MdScriptsIndexer/MdScriptsIndexer.csproj" />
+  <Project Path="MdScriptsVisualizer/MdScriptsVisualizer.csproj" />
+</Solution>
