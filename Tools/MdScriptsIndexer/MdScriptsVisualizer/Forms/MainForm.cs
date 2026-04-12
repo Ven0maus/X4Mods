@@ -131,7 +131,9 @@ namespace MdScriptsVisualizer
         private void Search()
         {
             var query = TxtSearch.Text.Trim();
-            if (CmbFilterMode.SelectedIndex == -1 || string.IsNullOrEmpty(query))
+            if (CmbFilterMode.SelectedIndex == -1 ||
+                CmbMdValuesFilter.SelectedIndex == -1 ||
+                string.IsNullOrEmpty(query))
             {
                 UndoSearch();
                 return;
@@ -140,6 +142,7 @@ namespace MdScriptsVisualizer
             query = query.ToLowerInvariant();
 
             var filterMode = (string)CmbFilterMode.SelectedItem;
+
             switch (filterMode)
             {
                 case "Filename search":
@@ -167,7 +170,17 @@ namespace MdScriptsVisualizer
 
         private void SearchFileContent(string query)
         {
-            var matchingScripts = _allScripts
+            var typeFilter = (string)CmbMdValuesFilter.SelectedItem;
+
+            IEnumerable<object> scripts = typeFilter switch
+            {
+                "Cues" => _allScripts.OfType<MdCue>(),
+                "Libraries" => _allScripts.OfType<MdLibrary>(),
+                "Macros" => _allScripts.OfType<MdMacro>(),
+                _ => _allScripts
+            };
+
+            var matchingScripts = scripts
                 .Where(s =>
                 {
                     var content = GetScriptContent(s);
@@ -215,7 +228,17 @@ namespace MdScriptsVisualizer
 
         private void SearchScripts(string query)
         {
-            var results = _allScripts
+            var typeFilter = (string)CmbMdValuesFilter.SelectedItem;
+
+            IEnumerable<object> scripts = typeFilter switch
+            {
+                "Cues" => _allScripts.OfType<MdCue>(),
+                "Libraries" => _allScripts.OfType<MdLibrary>(),
+                "Macros" => _allScripts.OfType<MdMacro>(),
+                _ => _allScripts
+            };
+
+            var results = scripts
                 .Where(s =>
                 {
                     return s switch
@@ -259,6 +282,11 @@ namespace MdScriptsVisualizer
         private void SearchTimer_Tick(object sender, EventArgs e)
         {
             SearchTimer.Stop();
+            Search();
+        }
+
+        private void CmbMdValuesFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
             Search();
         }
         #endregion

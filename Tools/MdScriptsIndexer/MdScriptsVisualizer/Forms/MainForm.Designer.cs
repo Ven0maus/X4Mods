@@ -85,6 +85,7 @@
             CmbMdValuesFilter.Size = new Size(144, 23);
             CmbMdValuesFilter.TabIndex = 3;
             CmbMdValuesFilter.Text = "Show All";
+            CmbMdValuesFilter.SelectedIndexChanged += CmbMdValuesFilter_SelectedIndexChanged;
             // 
             // label2
             // 
